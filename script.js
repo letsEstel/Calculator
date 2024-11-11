@@ -25,7 +25,7 @@ const operate = (a, b, op) => {
 
 display.setAttribute(
   "style",
-  "margin:3px; border-color:black; padding:27px;  border: 1px solid black;"
+  "display:flex; align-items:center;border-radius: 17px; box-sizing:border-box; height:72px;padding:17px; border:solid  2px; font-size:21px;"
 );
 div.appendChild(display);
 
@@ -33,7 +33,10 @@ const createBtn = (btnName) => {
   var btn = document.createElement("button");
   btn.textContent = `${btnName}`;
   btn.setAttribute("id", `${btnName}`);
-  btn.setAttribute("style", "height:72px;width:72px");
+  btn.setAttribute(
+    "style",
+    "height:72px;width:72px; margin:2px;border-radius: 17px; "
+  );
   div.appendChild(btn);
 };
 
@@ -48,7 +51,7 @@ createBtn("+");
 createBtn("-");
 createBtn("*");
 createBtn("/");
-div.setAttribute("style", "display:flex, flex-wrap:wrap");
+div.setAttribute("style", "flex-wrap:wrap;");
 
 let a;
 let b;
